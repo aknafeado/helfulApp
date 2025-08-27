@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>api generate</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" autofocus placeholder="Enter the url" />
+      <button type="button">Generate</button>
+      <a></a>
+    </div>
+    <script>
+      let val;
+      const inp = document.querySelector("input");
+      const btn = document.querySelector("button");
+      const output = document.querySelector("a");
+      btn.addEventListener("click", () => {
+        val = inp.value
+          .replace("raw", "cdn")
+          .replace("githubusercontent.com", "jsdelivr.net/gh")
+          .replace("/refs/heads/main/", "@main/");
+        output.href = val;
+        output.target = '_blank'
+        output.appendChild(document.createTextNode("link"));
+      });
+    </script>
+  </body>
+</html>
