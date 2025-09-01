@@ -8,6 +8,7 @@
   color: #fefefe;
   font-size: 18px;
   text-align: left;
+    background-color: #0f111a;
 }
 body {
   display: flex;
@@ -67,8 +68,4 @@ button:hover {
 input::placeholder {
   color: #fefefea4;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: #0f111a;
-  }
-}
+
